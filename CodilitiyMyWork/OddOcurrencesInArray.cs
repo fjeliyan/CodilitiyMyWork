@@ -45,12 +45,18 @@ all but one of the values in A occur an even number of times.
         }
         public static int solution(int[] A)
         {
+            //HashSet is a collection that contains no duplicate elements and whose elements are in no particular order 
+            //HashSet<T> class is not sorted and cannot contain duplicate elements.
+            //HashSet<T> means the specified uniqe collection
+            //Create one empty HashSet
            var has = new HashSet<int>();
 
-            foreach (var i in A)
+           foreach (var i in A)
+                //if has contains i remove 
                 if (has.Contains(i))
                     has.Remove(i);
                 else
+                    //if not add i 
                     has.Add(i);
             foreach (var i in has)
                 return i;
