@@ -31,11 +31,23 @@ X ≤ Y.
     {
         static void Main(string[] args)
         {
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    Console.WriteLine($"i {i} j{j}");
+                    if (j== 1)
+                    {
+                        break;
+                    }
+                }
+            }
             int X = 10;
             int Y = 85;
             int D = 30;
 
-            Console.WriteLine($"Solution is  {solution(X, Y, D)}");
+           // Console.WriteLine($"Solution is  {solution(X, Y, D)}");
         }
 
         public static int solution(int X, int Y, int D)
